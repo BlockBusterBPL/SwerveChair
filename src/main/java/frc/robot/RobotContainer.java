@@ -10,7 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+//import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 import frc.robot.commands.drive.AssistedLimelightDriveCommand;
 import frc.robot.subsystems.DriveSubsystem;
@@ -30,19 +30,19 @@ public class RobotContainer {
   private final AssistedLimelightDriveCommand assistedLimelightDriveCommand = new AssistedLimelightDriveCommand(driveSubsystem);
 
   //Operator Contoller and Buttons
-  private final XboxController operatorController = new XboxController(1);
-  private final JoystickButton operatorBButton = new JoystickButton(operatorController, XboxController.Button.kB.value);
-  private final JoystickButton operatorAButton = new JoystickButton(operatorController, XboxController.Button.kA.value);
-  private final JoystickButton operatorXButton = new JoystickButton(operatorController, XboxController.Button.kX.value);
-  private final JoystickButton operatorYButton = new JoystickButton(operatorController, XboxController.Button.kY.value);
-  private final JoystickButton operatorLeftBumper = new JoystickButton(operatorController, XboxController.Button.kBumperLeft.value);
-  private final JoystickButton operatorStartButton = new JoystickButton(operatorController, XboxController.Button.kStart.value);
-  private final JoystickButton operatorSelectButton = new JoystickButton(operatorController, XboxController.Button.kBack.value);
-  private final JoystickButton operatorRightBumper = new JoystickButton(operatorController, XboxController.Button.kBumperRight.value);
+  //private final XboxController operatorController = new XboxController(1);
+  //private final JoystickButton operatorBButton = new JoystickButton(operatorController, XboxController.Button.kB.value);
+  //private final JoystickButton operatorAButton = new JoystickButton(operatorController, XboxController.Button.kA.value);
+  //private final JoystickButton operatorXButton = new JoystickButton(operatorController, XboxController.Button.kX.value);
+  //private final JoystickButton operatorYButton = new JoystickButton(operatorController, XboxController.Button.kY.value);
+  //private final JoystickButton operatorLeftBumper = new JoystickButton(operatorController, XboxController.Button.kBumperLeft.value);
+  //private final JoystickButton operatorStartButton = new JoystickButton(operatorController, XboxController.Button.kStart.value);
+  //private final JoystickButton operatorSelectButton = new JoystickButton(operatorController, XboxController.Button.kBack.value);
+  //private final JoystickButton operatorRightBumper = new JoystickButton(operatorController, XboxController.Button.kBumperRight.value);
 
     //Driver Controller and Buttons
-    private final XboxController driverController = new XboxController(0);
-    private final JoystickButton driverStartButton = new JoystickButton(driverController, XboxController.Button.kStart.value);
+    //private final XboxController driverController = new XboxController(0);
+    //private final JoystickButton driverStartButton = new JoystickButton(driverController, XboxController.Button.kStart.value);
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.

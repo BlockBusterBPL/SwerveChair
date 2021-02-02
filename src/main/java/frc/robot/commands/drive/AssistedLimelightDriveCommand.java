@@ -7,9 +7,9 @@
 
 package frc.robot.commands.drive;
 
-import edu.wpi.first.networktables.NetworkTable;
+//import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.networktables.NetworkTableInstance;
+//import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj2.command.CommandBase;
@@ -56,10 +56,6 @@ public class AssistedLimelightDriveCommand extends CommandBase {
       }
 
       rotation = driverController.getRawAxis(Constants.DriverControl.driverControllerRightStickXAxis);
-      
-      // SmartDashboard.putNumber("X Box X-Axis", directionX);
-      // SmartDashboard.putNumber("X Box Y-Axis", directionY);
-      // SmartDashboard.putNumber("X Box Rotation", rotation);
 
       //drive normally with joysticks
       this.driveSubsystem.drive(directionX, directionY, rotation, false, slowMode, false);
