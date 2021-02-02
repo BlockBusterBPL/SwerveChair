@@ -71,26 +71,6 @@ public final class Constants {
         public static final double kRearRightEncoderOffset = 338; //18
     }
 
-    public final class ShooterSubsystem
-    {
-        public static final int bottomShooterFalconCan = 32; //
-        public static final int leftShooterFalconCan = 30; //
-        public static final int rightShooterFalconCan = 31; //
-    }
-
-    public final class IntakeSubsystem
-    {
-        public static final int innerStorageVictorCan = 41; //
-
-        public static final int outerIntakeVictorCan = 40; //
-    }
-
-    public final class ClimbSubsystemConstants
-    {
-        public static final int climbMotor = 50;
-        public static final int winchMotor = 51;
-    }
-
     public final class Sensors
     {
         public static final int storageContrastSensorDIO = 0;
