@@ -11,9 +11,11 @@
 package frc.robot.commands.drive;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 import frc.robot.Constants;
+import frc.robot.Constants.OperatorControl;
 import frc.robot.subsystems.DriveSubsystem;
 
 /**
@@ -50,8 +52,17 @@ public class DriveCommand extends CommandBase {
         double directionY = m_driverController.getRawAxis(Constants.DriverControl.driverControllerLeftStickYAxis);
         double rotation = m_driverController.getRawAxis(Constants.DriverControl.driverControllerRightStickXAxis);
         
-        this.mDriveSubsystem.drive(directionX, directionY, rotation, false, true, false);
+        double slowRotation = 0.5 * rotation;
 
+        boolean slowMode =  m_driverController.getBumper(Hand.kLeft);
+
+        if (m_driverController.getXButton()){
+            this.mDriveSubsystem.xMode();
+        } else if (m_driverController.getYButton()) {
+            this.mDriveSubsystem.drive(0, 0, 0, false, false, true);
+        } else {
+            this.mDriveSubsystem.drive(directionX, directionY, slowRotation, false, slowMode, false);
+        }
         // Robot.driveSubsystem.drive(-Robot.oi.driverController.getLeftStickXValue(), -Robot.oi.driverController.getLeftStickYValue(),
         //             -Robot.oi.driverController.getRightStickXValue(), false,
         //             Robot.oi.driverController.getRightBumperPressed(), Robot.oi.driverController.getXButtonPressed());

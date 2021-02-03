@@ -12,7 +12,9 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 //import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-import frc.robot.commands.drive.AssistedLimelightDriveCommand;
+//import frc.robot.commands.drive.AssistedLimelightDriveCommand;
+import frc.robot.commands.auto.AutoCommand;
+import frc.robot.commands.drive.DriveCommand;
 import frc.robot.subsystems.DriveSubsystem;
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -27,8 +29,10 @@ public class RobotContainer {
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
 
   //Drive Commands
-  private final AssistedLimelightDriveCommand assistedLimelightDriveCommand = new AssistedLimelightDriveCommand(driveSubsystem);
+  //private final AssistedLimelightDriveCommand assistedLimelightDriveCommand = new AssistedLimelightDriveCommand(driveSubsystem);
+  private final DriveCommand driveCommand = new DriveCommand(driveSubsystem);
 
+  private final AutoCommand autoCommand = new AutoCommand();
   //Operator Contoller and Buttons
   //private final XboxController operatorController = new XboxController(1);
   //private final JoystickButton operatorBButton = new JoystickButton(operatorController, XboxController.Button.kB.value);
@@ -48,10 +52,11 @@ public class RobotContainer {
    * The container for the robot.  Contains subsystems, OI devices, and commands.
    */
   public RobotContainer() {
+    System.out.println("Starting SwerveChair...");
     // Configure the button bindings
     configureButtonBindings();
 
-    driveSubsystem.setDefaultCommand(assistedLimelightDriveCommand);
+    driveSubsystem.setDefaultCommand(driveCommand);
 
   }
 
@@ -78,7 +83,7 @@ public class RobotContainer {
 
     //This auton rotates, xmodes, shoots, moves forawrd
     //return autoShootWithXModeSequesntialCommand;
-    return assistedLimelightDriveCommand;
+    return autoCommand;
     
   }
 }
