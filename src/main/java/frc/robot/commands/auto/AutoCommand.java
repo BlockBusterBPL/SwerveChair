@@ -42,17 +42,8 @@ public class AutoCommand extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     @Override
     public void execute() {
-        System.out.print("Wait");
-        WaitCommand wc = new WaitCommand(0.5);
-        System.out.print(".");
-        WaitCommand wc2 = new WaitCommand(0.5);
-        System.out.print(".");
-        WaitCommand wc3 = new WaitCommand(0.5);
-        System.out.println(".");
-        WaitCommand wc4 = new WaitCommand(1);
-        System.out.println("It's all TeleOp?");
-        WaitCommand wc5 = new WaitCommand(3);
-        System.out.println("Always has been.");
+        System.out.println("Wait, it's all teleop?");
+        System.out.println("Always Has Been.");
         CommandScheduler.getInstance().disable(); // disable the robot
     }
 
