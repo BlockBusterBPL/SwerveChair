@@ -29,6 +29,10 @@ public final class Constants {
         public static final int driverControllerLeftTriggerAxis = 2;
     }
 
+    public final class MusicSubsystem {
+        public static final int canID = 1;
+    }
+
     public final class OperatorControl {
         public static final int operatorControllerPort = 1;
         public static final int operatorRightTrigger = 3;
